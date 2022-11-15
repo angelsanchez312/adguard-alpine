@@ -1,4 +1,5 @@
 #!/bin/ash
+
 echo "Enter the url for the latest AdGuard Home release "
 echo "You can find the latest version here: "
 echo "https://github.com/AdguardTeam/AdGuardHome/releases"
@@ -13,10 +14,10 @@ wget -P /tmp/AGH.$RND1/ $aghurl
 tar -xf /tmp/AGH.$RND1/*.tar.gz
 
 # Move AdGuardHome into the /opt/ directory
-mv /tmp/AGH.$RND1/AdGuardHome /opt/
+cp /tmp/AGH.$RND1/AdGuardHome /opt/
 
 # Move file in repo to /etc/init.d/AdGuardHome
-mv ./AdGuardHome /etc/init.d/AdGuardHome
+cp ./AdGuardHome /etc/init.d/AdGuardHome
 
 rc-update add AdGuardHome
 rc-update AdGuardHome start
