@@ -3,7 +3,10 @@ This is a script that auto installs AdGuard Home to the /opt/ directory. It was 
 
 The AdGuardHome script was created by Vlad, his website can be found [here](https://vladislav.xyz/posts/adguard-on-alpine-linux/).
 
-# Instructions
+## Demo
+![](https://raw.githubusercontent.com/angelsanchez312/adguard-alpine/main/script-demo.gif)
+
+## Instructions
 
 NOTE: This script was designed to be run as root. Some of the commands may not run on an account without root priviledges.
 
