@@ -17,4 +17,4 @@ Make the script executable
 `chmod +x ./adguardhome-alpine.sh`
 
 Run the script
-./adguardhome-alpine.sh
+`./adguardhome-alpine.sh`
