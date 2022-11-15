@@ -3,18 +3,18 @@
 echo "Enter the url for the latest AdGuard Home release "
 echo "You can find the latest version here: "
 echo "https://github.com/AdguardTeam/AdGuardHome/releases"
-echo "uname -m lists your architecture as "; uname -m
+ARCH=$(uname -r)
+echo "uname -m lists your architecture as " $ARCH
 read aghurl
 
-RND1=$$
 
 # Extract archive from tmp folder
-mkdir -p /tmp/AGH.$RND1/
-wget -P /tmp/AGH.$RND1/ $aghurl 
-tar -xf /tmp/AGH.$RND1/*.tar.gz
+mkdir -p ./AGH/
+wget -P ./AGH/ $aghurl 
+tar -xf ./AGH/*.tar.gz
 
 # Move AdGuardHome into the /opt/ directory
-cp /tmp/AGH.$RND1/AdGuardHome /opt/
+cp -r ./AGH/AdGuardHome /opt/
 
 # Move file in repo to /etc/init.d/AdGuardHome
 cp ./AdGuardHome /etc/init.d/AdGuardHome
